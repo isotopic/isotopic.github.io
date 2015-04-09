@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SVG Laboratory</title>
+  <style type="text/css">
+body{
+	margin:0;
+	padding:0;
+}
+
+#nav-switch{
+	position:absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+
+
+
+#nav-switch:hover circle{
+	fill:#f8f8f8;
+}
+
+svg{
+	display:block;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+
+<!-- hamburger -->
+<svg id="nav-switch" width="50" height="50" 
+xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<circle cx="25" cy="25" r="23" stroke-width="1" stroke="#f0f0f0" fill="#fff"/>
+	<line x1="15" x2="35"  y1="19" y2="19" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
+	<line x1="15" x2="35"  y1="25" y2="25" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
+	<line x1="15" x2="35"  y1="31" y2="31" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
+
+</svg>
+
+
+
+
+<!-- skate 
+
+lowercase "a": relative to last point
+a(raioX,raioY 0 0,1 destX,destY)
+-->
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="150" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <path stroke-linecap="round" style="stroke:#f4f4f4; stroke-width:4; fill: none;" 
+
+    d="
+    M10,10 l15,10 l90,0 l15,-10      
+
+	m-100,20 
+    a5,5  0 0,1 5,-5 
+    a5,5  0 0,1 5,5 
+    a5,5  0 0,1 -5,5
+    a5,5  0 0,1 -5,-5
+
+	m70,0 
+    a5,5  0 0,1 5,-5 
+    a5,5  0 0,1 5,5 
+    a5,5  0 0,1 -5,5
+    a5,5  0 0,1 -5,-5"/> 
+
+</svg>
+
+
+
+<!-- 
+ARC PARAMS
+
+rX
+rY
+x-axis-rotation - quase sempre zero
+large-arc-flag - mostra maior caminho possivel
+dX
+dY
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="150" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">  
+
+		<path d="M40,20  A30,30 0 0,0 70,70"
+		    style="stroke: #cccc00; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 1,0 70,70"
+		    style="stroke: #ff0000; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 1,1 70,70"
+		    style="stroke: #00ff00; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 0,1 70,70"
+		    style="stroke: #0000ff; stroke-width:2; fill:none;"/>
+
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
