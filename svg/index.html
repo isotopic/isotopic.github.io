@@ -2,12 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>SVG Laboratory</title>
-  <style type="text/css">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SVG Lab</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<style type="text/css">
 body{
-	margin:0;
-	padding:0;
+	color:#333;
+}
+h4{
+	margin-top:40px;
+}
+p{
+color:#999;
 }
 
 #nav-switch{
@@ -34,6 +45,8 @@ svg{
 
 <body>
 
+<div class="container-fluid">
+
 
 <!-- hamburger -->
 <svg id="nav-switch" width="50" height="50" 
@@ -50,12 +63,37 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 
 
 
-<!-- skate 
 
-lowercase "a": relative to last point
-a(raioX,raioY 0 0,1 destX,destY)
+<!-- 
+ARC PARAMS
+
+Aa
+rX,rY
+x-axis-rotation - quase sempre zero
+large-arc-flag - mostra maior caminho possivel
+dX,dY
 -->
-<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="150" 
+<h4>Arc params</h4>
+<p>A | a &nbsp; radiusX,radiusY &nbsp; destX,destY</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="100" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">  
+
+		<path d="M40,20  A30,30 0 0,0 70,70"
+		    style="stroke: #cccc00; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 1,0 70,70"
+		    style="stroke: #ff0000; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 1,1 70,70"
+		    style="stroke: #00ff00; stroke-width:2; fill:none;"/>
+
+		<path d="M40,20  A30,30 0 0,1 70,70"
+		    style="stroke: #0000ff; stroke-width:2; fill:none;"/>
+
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="80" 
     xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <path stroke-linecap="round" style="stroke:#f4f4f4; stroke-width:4; fill: none;" 
@@ -79,31 +117,21 @@ a(raioX,raioY 0 0,1 destX,destY)
 
 
 
+
 <!-- 
-ARC PARAMS
 
-rX
-rY
-x-axis-rotation - quase sempre zero
-large-arc-flag - mostra maior caminho possivel
-dX
-dY
 -->
+<h4>Quadratic bezier curve</h4>
+<p>Q | q &nbsp; anchorX,anchorY &nbsp; destX,destY</p>
 
-<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="150" 
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc"
     xmlns:xlink="http://www.w3.org/1999/xlink">  
 
-		<path d="M40,20  A30,30 0 0,0 70,70"
-		    style="stroke: #cccc00; stroke-width:2; fill:none;"/>
+		<!-- Q upper: posição no svg global -->
+		<path d="M0,0 Q0,100 100,100" style="stroke: #006666; fill:none;"/> 
 
-		<path d="M40,20  A30,30 0 1,0 70,70"
-		    style="stroke: #ff0000; stroke-width:2; fill:none;"/>
-
-		<path d="M40,20  A30,30 0 1,1 70,70"
-		    style="stroke: #00ff00; stroke-width:2; fill:none;"/>
-
-		<path d="M40,20  A30,30 0 0,1 70,70"
-		    style="stroke: #0000ff; stroke-width:2; fill:none;"/>
+		<!-- q lowercase: relativa ao ultimo ponto -->
+		<path d="M198,0 q0,100 -100,100" style="stroke: #666600; fill:none;"/> 
 
 </svg>
 
@@ -112,15 +140,47 @@ dY
 
 
 
+<h4>SVG Text</h4>
+<p>tag text</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <text x="20" y="40" style="letter-spacing:2;">Example SVG text 1</text>
+</svg>
 
 
 
 
 
-
-
-
+</div>
 
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
