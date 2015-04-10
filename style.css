@@ -1,0 +1,90 @@
+body{
+  color:#333;
+  font-family: "Dosis";
+}
+.low-poly{
+  background-image:url(bg.png);
+  background-position: center center;
+}
+.white-bg{
+  background-color:#fff;
+}
+.home-logo{
+  width: 130px;
+  height:auto;
+  display: inline;
+}
+a.pill{
+color:#272F32;
+font-weight: bold;
+text-decoration: none;
+display:inline-block;
+-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
+padding:6px 10px;
+margin:0;
+border:2px solid #272F32;
+min-width: 150px;
+margin-top:10px;
+-webkit-transition: min-width 0.2s;
+transition: min-width 0.2s;
+}
+
+a.pill:hover{
+text-decoration: none;
+min-width:170px;
+}
+
+
+.left-pannel{
+
+}
+.right-pannel{
+  min-height:1000px;
+}
+
+.logo{
+  width:80px;
+  height: auto;
+}
+
+h4{
+  margin-top:40px;
+}
+p{
+color:#999;
+}
+
+svg{
+  display:block;
+}
+
+
+
+
+
+
+
+.top10{margin-top:10px;}
+.top20{margin-top:20px;}
+.top30{margin-top:30px;}
+.top40{margin-top:40px;}
+.top50{margin-top:50px;}
+.top60{margin-top:60px;}
+.top70{margin-top:70px;}
+.top80{margin-top:80px;}
+.top90{margin-top:90px;}
+.top100{margin-top:100px;}
+.top150{margin-top:150px;}
+
+
+.bottom10{margin-bottom:10px;}
+.bottom20{margin-bottom:20px;}
+.bottom30{margin-bottom:30px;}
+.bottom40{margin-bottom:40px;}
+.bottom50{margin-bottom:50px;}
+.bottom60{margin-bottom:60px;}
+.bottom70{margin-bottom:70px;}
+.bottom80{margin-bottom:80px;}
+.bottom90{margin-bottom:90px;}
+.bottom100{margin-bottom:100px;}
+
