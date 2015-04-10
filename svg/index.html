@@ -9,10 +9,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Dosis:300,400,500,700,600,800" rel="stylesheet" type="text/css">
 
 <style type="text/css">
+.logo{
+	width:80px;
+	height: auto;
+}
 body{
 	color:#333;
+	font-family: "Dosis";
 }
 h4{
 	margin-top:40px;
@@ -21,44 +27,40 @@ p{
 color:#999;
 }
 
-#nav-switch{
-	position:absolute;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
-}
-
-
-
-
-#nav-switch:hover circle{
-	fill:#f8f8f8;
-}
-
 svg{
 	display:block;
 }
 
 
+
+
+
+
   </style>
 </head>
 
+
+
 <body>
+
 
 <div class="container-fluid">
 
 
-<!-- hamburger -->
-<svg id="nav-switch" width="50" height="50" 
-xmlns="http://www.w3.org/2000/svg" 
-xmlns:xlink="http://www.w3.org/1999/xlink">
+	<div class="col-sm-3">
+		<h1><a href="../"><img src="../logo.svg" alt="Isotopic logo" class='logo'></a></h1>
+	</div>
 
-	<circle cx="25" cy="25" r="23" stroke-width="1" stroke="#f0f0f0" fill="#fff"/>
-	<line x1="15" x2="35"  y1="19" y2="19" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
-	<line x1="15" x2="35"  y1="25" y2="25" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
-	<line x1="15" x2="35"  y1="31" y2="31" stroke-width="4" stroke="#ddd" stroke-linecap="round"/>
 
-</svg>
+
+	<div class="col-sm-9">
+
+
+
+
+
+
+<H2>SVG Playground</H2>
 
 
 
@@ -73,47 +75,37 @@ x-axis-rotation - quase sempre zero
 large-arc-flag - mostra maior caminho possivel
 dX,dY
 -->
-<h4>Arc params</h4>
-<p>A | a &nbsp; radiusX,radiusY &nbsp; destX,destY</p>
+<h4>Path arc</h4>
+<p>A || a &nbsp; radiusX,radiusY &nbsp; x-axis-rotation &nbsp; large-arc-flag &nbsp; destX,destY <br/> Ideal pra curvas perfeitamente redondas</p>
 
-<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="100" 
+
+<svg xmlns="http://www.w3.org/2000/svg"    width="200" height="200" style="border:1px solid #ccc; font-weight:500"
     xmlns:xlink="http://www.w3.org/1999/xlink">  
+	<path d="M40,20  A30,30 0 0,0 70,70" style="stroke: #ccc; stroke-width:5; fill:none;"/>
+	<path d="M40,20  A30,30 0 1,0 70,70" style="stroke: #ff0000; stroke-width:2; fill:none;"/>
+	<path d="M40,20  A30,30 0 1,1 70,70" style="stroke: #00ff00; stroke-width:2; fill:none;"/>
+	<path d="M40,20  A30,30 0 0,1 70,70" style="stroke: #0000ff; stroke-width:2; fill:none;"/>
 
-		<path d="M40,20  A30,30 0 0,0 70,70"
-		    style="stroke: #cccc00; stroke-width:2; fill:none;"/>
 
-		<path d="M40,20  A30,30 0 1,0 70,70"
-		    style="stroke: #ff0000; stroke-width:2; fill:none;"/>
-
-		<path d="M40,20  A30,30 0 1,1 70,70"
-		    style="stroke: #00ff00; stroke-width:2; fill:none;"/>
-
-		<path d="M40,20  A30,30 0 0,1 70,70"
-		    style="stroke: #0000ff; stroke-width:2; fill:none;"/>
-
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="80" 
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-
-    <path stroke-linecap="round" style="stroke:#f4f4f4; stroke-width:4; fill: none;" 
-
+   <path stroke-linecap="round" style="stroke:#aaa; stroke-width:4; fill: none;" 
     d="
-    M10,10 l15,10 l90,0 l15,-10      
+    M30,150 l15,10 l90,0 l15,-10      
 
-	m-100,20 
+  m-100,20 
     a5,5  0 0,1 5,-5 
     a5,5  0 0,1 5,5 
     a5,5  0 0,1 -5,5
     a5,5  0 0,1 -5,-5
 
-	m70,0 
+  m70,0 
     a5,5  0 0,1 5,-5 
     a5,5  0 0,1 5,5 
     a5,5  0 0,1 -5,5
     a5,5  0 0,1 -5,-5"/> 
 
+
 </svg>
+
 
 
 
@@ -121,17 +113,17 @@ dX,dY
 <!-- 
 
 -->
-<h4>Quadratic bezier curve</h4>
-<p>Q | q &nbsp; anchorX,anchorY &nbsp; destX,destY</p>
+<h4>Path quadratic bezier curve</h4>
+<p>Q || q &nbsp; anchorX,anchorY &nbsp; destX,destY <br> Ideal pra curvas francesas</p>
 
 <svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc"
     xmlns:xlink="http://www.w3.org/1999/xlink">  
 
 		<!-- Q upper: posição no svg global -->
-		<path d="M0,0 Q0,100 100,100" style="stroke: #006666; fill:none;"/> 
+		<path d="M0,0 Q0,100 100,100" style="stroke: #884455; fill:none;"/> 
 
 		<!-- q lowercase: relativa ao ultimo ponto -->
-		<path d="M198,0 q0,100 -100,100" style="stroke: #666600; fill:none;"/> 
+		<path d="M198,0 q-40,100 -100,100" style="stroke-width:3; stroke: #cc9988; fill:none;"/> 
 
 </svg>
 
@@ -141,18 +133,162 @@ dX,dY
 
 
 <h4>SVG Text</h4>
-<p>tag text</p>
+<p>Campo de texto simples. Precisa de gambiarra pra quebra de linha automática.</p>
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="http://www.w3.org/2000/svg"   width="200" height="200" style="border:1px solid #ccc; font-weight:300"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-    <text x="20" y="40" style="letter-spacing:2;">Example SVG text 1</text>
+
+    <path d="M100,20  l0,160"  style="stroke: #ccc; stroke-width:1"/>
+
+    <text x="100" y="40" style="fill: #33bbbb; text-anchor: start">text-anchor:start</text>
+    <text x="100" y="60" style="fill: #33bbbb; text-anchor: middle">text-anchor:middle</text>
+    <text x="100" y="80" style="fill: #33bbbb; text-anchor: end">text-anchor:end</text>
+
+    <text x="0" y="100" style="fill: #333333; width:150px">This is a really large text starting at zero whose line should be broken</text>
+
+</svg>
+
+
+<Br><br>
+
+<p>Texto seguindo path.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"   width="200" height="200" style="border:1px solid #ccc; font-weight:500"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<defs>
+     <path  id="goldenpath"  style="fill:none; stroke: #ccc; stroke-width:1" d="
+     M100,180  a80,80 0 0,1 -80, -80
+               a80,80 0 0,1  80, -80
+               a80,80 0 0,1  80,  80
+               a80,80 0 0,1  -80, 80
+     "/>
+	</defs>
+
+	<!-- Printando a def apenas pra mostrar a linha utilizada -->
+	<use xlink:href="#goldenpath" />
+
+	<text  style="fill: #000000; text-anchor:middle"><!-- parametros <text x='' y=''> bugam ie9. Usar apenas o do path -->
+	    <textPath xlink:href="#goldenpath" startOffset="50%" >This looks very promissing</textPath>
+	</text>  
+
+
 </svg>
 
 
 
 
 
+
+<h4>SVG Symbols</h4>
+<p>Reuso de blocos diversos.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc; font-weight:500"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <symbol id="bolinha">
+    	<g>
+	        <circle cx="25" cy="25" r="25"  style="border:1px solid black"/>
+	        <path d="M10,25 a20,20 0 0,0 30,0  a10,10 0 0,1 -30,0" style="stroke: #000; fill:none;"/> 
+	    </g>
+    </symbol>
+
+    <use xlink:href="#bolinha" x="50" y="50" style="fill:gray" />
+    <use xlink:href="#bolinha" x="90" y="90" style="fill:red"/>
+
+
+</svg>
+
+
+
+
+
+
+
+<h4>SVG Animation via SMIL</h4>
+<p>Bacana mas fode com IE users</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc; font-weight:500"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+
+		<Path  d="M10,50 a50,50 0 0,0 90,0 a50,50 0 0,1 90,0" style="stroke:#ccc;fill:none;stroke-width:2"/>
+
+    <rect x="-15" y="-7" width="30" height="14"
+        style="stroke: #ff0000; fill: none;">
+      <animateMotion
+              path="M10,50 a50,50 0 0,0 90,0 a50,50 0 0,1 90,0"
+              begin="0s" dur="10s" repeatCount="indefinite"
+              rotate="auto"
+              />
+  </rect>
+
+
+</svg>
+
+
+
+<h4>SVG Animation via Javascript</h4>
+<p>É o que tem pra janta</p>
+
+<svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc; font-weight:500"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+		<Path  id="corda" d="M80,50 Q100,200 190,80" style="stroke:#55ddff;fill:none;stroke-width:4"/>
+
+ 
+</svg>
+
+
+
+<script type="text/javascript">
+
+
+var svgline = document.getElementById("svgline");
+
+var counter = 0;
+var anchorX = 0;
+var anchorY = 0;
+
+var repeat = function(){
+
+  counter+=0.06;
+
+  //anchorX = 100 + (50*Math.sin(counter));
+  anchorX = 100;
+  anchorY = 150 + (120*Math.cos(counter));
+
+
+  corda.setAttribute('d','M10,80 Q'+anchorX+','+anchorY+' 190,80');
+
+
+
+
+}
+
+
+setInterval(repeat, 10);
+
+
+</script>
+
+<Br><Br><Br>
+
+Mais detalhes: <a href="http://tutorials.jenkov.com/svg/">http://tutorials.jenkov.com/svg/</a>
+
+<Br>
+<Br>
+
+
+
+
+
 </div>
+
+
+
+</div><!-- container-fluid -->
 
 
   </body>
