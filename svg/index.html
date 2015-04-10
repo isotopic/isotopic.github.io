@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>SVG | Isotopic playgrounds</title>
+        <title>SVG | Isotopic playground</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -232,34 +232,59 @@
     </svg>
 
 
+        <Br><br>
+
+
+
+
+  <p>Manipulando stroke-dasharray e stroke-dashoffset</p>
+    <svg xmlns="http://www.w3.org/2000/svg"  width="200" height="200" style="border:1px solid #ccc; font-weight:500"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        <Path  id="desenho" d="M10,100 a50,50 0 0,0 90,0 a50,50 0 0,1 90,0" style="stroke:#ccc;fill:none;stroke-width:3"/>
+    </svg>
+
+
+
+
 
     <script type="text/javascript">
 
-
-    var svgline = document.getElementById("svgline");
-
     var counter = 0;
+
+    var corda = document.getElementById("corda");
     var anchorX = 0;
     var anchorY = 0;
+
+    var desenho = document.getElementById("desenho");
+    var desenho_size = desenho.getTotalLength();
+
+    desenho.setAttribute('stroke-dasharray', desenho_size + ' ' + desenho_size);
+    desenho.setAttribute('stroke-dashoffset', 0);
+
+
+    console.log(desenho_size);
 
     var repeat = function(){
 
       counter+=0.06;
 
-      //anchorX = 100 + (50*Math.sin(counter));
+      //Corda
       anchorX = 100;
       anchorY = 150 + (120*Math.cos(counter));
-
-
       corda.setAttribute('d','M10,80 Q'+anchorX+','+anchorY+' 190,80');
 
+      //Desenho
+      desenho.setAttribute('stroke-dashoffset', Math.cos(counter)*desenho_size);
 
 
-
+      if(counter>=2*Math.PI){
+        counter = 0;
+      }
     }
 
 
     setInterval(repeat, 10);
+
 
 
     </script>
