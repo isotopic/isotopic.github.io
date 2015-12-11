@@ -31,7 +31,7 @@ a:hover{
     color:#272F32;
 }
 a.ball{
-  background-color:#272F32;
+  background-color:#222;
   text-decoration: none;
   display:inline-block;
   -webkit-border-radius: 50%;
@@ -39,7 +39,7 @@ a.ball{
   border-radius: 50%;
   padding-top:97px;
   margin:0;
-  border:2px solid #272F32;
+  border:none;
   width: 280px;
   height:280px;
 }
