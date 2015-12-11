@@ -1,62 +1,58 @@
 body{
-  color:#333;
+  color:#272F32;
   font-family: "Dosis";
-}
-.low-poly{
-  background-image:url(bg.png);
-  background-position: top center;
-}
-.white-bg{
-  background-color:#fff;
-}
-.home-logo{
-  width: 130px;
-  height:auto;
-  display: inline;
-}
-a.pill{
-color:#272F32;
-font-weight: bold;
-text-decoration: none;
-display:inline-block;
--webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;
-padding:6px 10px;
-margin:0;
-border:2px solid #272F32;
-min-width: 150px;
-margin-top:10px;
--webkit-transition: min-width 0.2s;
-transition: min-width 0.2s;
-}
-
-a.pill:hover{
-text-decoration: none;
-min-width:170px;
-}
-
-
-.left-pannel{
-
-}
-.right-pannel{
-  min-height:1000px;
-}
-
-.logo{
-  width:80px;
-  height: auto;
+  background-color: #f0f0f0;
+  background-image: url(img/bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 h4{
   margin-top:40px;
 }
+
 p{
-color:#999;
+  font-size: 16px;
+  color:#fff;
+  font-weight: 300;
 }
 
-svg{
-  display:block;
+.home-logo{
+  width: 70px;
+  height:auto;
+  display: inline;
 }
+a{
+  color:#272F32;
+}
+a:hover{
+  text-decoration: none;
+    color:#272F32;
+}
+a.ball{
+  background-color:#272F32;
+  text-decoration: none;
+  display:inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding-top:97px;
+  margin:0;
+  border:2px solid #272F32;
+  width: 280px;
+  height:280px;
+}
+
+a.ball > p{
+  color:#777F82;
+  margin-top:30px !important;
+}
+
+
+
+
+
 
 
 
@@ -87,4 +83,3 @@ svg{
 .bottom80{margin-bottom:80px;}
 .bottom90{margin-bottom:90px;}
 .bottom100{margin-bottom:100px;}
-
